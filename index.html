@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  
+  <title>E-commerce product page</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@100..900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <script src="app.js" defer></script>
+  <script src="cart.js" defer></script>
+  <script src="imageGallery.js" defer></script>
+</head>
+<body>
+
+  <header>
+    
+    <nav class="navbar">
+
+      <button type="button" class="navbar_toggler" id="toggler" aria-expanded="true">
+        <span class="sr_only">menu</span>
+      </button>
+
+      <div class="navbar_brand">
+        <a href="">
+          <img src="images/logo.svg" alt="logo">
+        </a>
+      </div>
+
+      <div id="navbarNav" aria-expanded="false">
+        <ul class="navbar_nav" aria-expanded="false">
+          <li><a href="">Collections</a></li>
+          <li><a href="">Men</a></li>
+          <li><a href="">Women</a></li>
+          <li><a href="">About</a></li>
+          <li><a href="">Contact</a></li>
+        </ul>
+      </div>
+    </nav>
+
+    <div class="user_actions">
+      <button class="cart">
+        <span class="sr_only">cart</span>
+      </button>
+      <div class="user_profile">
+        <img src="images/image-avatar.png" alt="">
+      </div>
+    </div>
+  </header>
+
+  <div class="wrapper">
+    <div class="display_prod">
+      <div class="display_prod_img">
+        <img src="images/image-product-1.jpg" alt="" id="prod_img">
+        <button type="button" class="mb-btn" id="func_previous"></button>
+        <button type="button" class="mb-btn" id="func_next"></button>
+        <div class="img_thumbnail">
+          <div class="slide">
+            <img src="images/image-product-1-thumbnail.jpg" alt="" data-active="false" data-index="0">
+          </div>
+          <div class="slide">
+            <img src="images/image-product-2-thumbnail.jpg" alt="" data-active="false" data-index="1">
+          </div>
+          <div class="slide">
+            <img src="images/image-product-3-thumbnail.jpg" alt="" data-active="false" data-index="2">
+          </div>
+          <div class="slide">
+            <img src="images/image-product-4-thumbnail.jpg" alt="" data-active="false" data-index="3">
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="display_prod_info">
+      <span class="prod_company">SNEAKER COMPANY</span>
+      <h1 class="title">
+        <span class="prod_title">Fall Limited Edition <br>Sneakers</span>
+      </h1>
+      <p>
+        <span class="prod_description">
+          These low-profile sneakers are your perfect casual wear companion. Featuring a 
+          durable rubber outer sole, they’ll withstand everything the weather can offer.
+        </span>
+      </p>
+      <span class="price">
+        <span class="price_whole">
+          $125.00
+          <span class="discount">50%</span>
+        </span>
+        <span class="price_discount">$250.0</span>
+      </span>
+
+      <!-- increase/decrease quantity -->
+      <div class="prod_func_wrapper">
+        <div class="prod_quantity_func">
+          <button type="button" class="prod_quantity" id="quantity_decrease"></button>
+          <span>0</span>
+          <button type="button" class="prod_quantity" id="quantity_increase"></button>
+        </div>
+
+        <!-- add to cart -->
+        <div class="prod_to_cart">
+          <button type="button" id="prod_add">
+            <img src="images/icon-cart-dark.svg" alt="">
+            <span>
+              Add to cart
+            </span>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</body>
+</html>
